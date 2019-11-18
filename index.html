@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="xt-animation.css">
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        h2 {
+            float: left;
+            margin: 30px 0 0 30px;
+            width: 400px;
+            height: 40px;
+            background-image: -webkit-linear-gradient(92deg, red, rgb(214, 6, 255),aqua);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 
+        动画分析过程：
+        1：分析动画运动轨迹，运动现象
+        2：想一下那些css 属性可以实现这样的效果。
+        3：根据轨迹变化，进行百分比划分（不一定是等分），
+           划分方式：找到几个特殊的【峰值】，在峰值与峰值之间进行划分
+        4：在每个不同的百分比区间更改属性的值
+        5：如果是渐进式的；值越来越小，直到小到回到最初的状态
+        
+        动画运动轨迹：
+        常用的：平移  旋转  拉伸  显示  隐藏  透明度
+        */
+    </style>
+
+</head>
+
+<body>
+    <h1>展示自己的动画样式</h1>
+    <h2 class="xt-animation bounce">Bounce弹跳动画</h2>
+    <h2 class="xt-animation flash">flash闪烁动画</h2>
+    <h2 class="xt-animation flasher">flasher快闪</h2>
+    <h2 class="xt-animation pules">pules缩放样式</h2>
+    <h2 class="xt-animation pulesFont">pulesFont字体放大</h2>
+    <h2 class="xt-animation rubberBand">rubberBand伸缩动画</h2>
+    <h2 class="xt-animation shake">shake抖动</h2>
+    <h2 class="xt-animation swing">swing摇摆</h2>
+    <h2 class="xt-animation graduallyPut">graduallyPut摇摆缩放</h2>
+    <h2 class="xt-animation turntable">turntable转盘摇摆</h2>
+    <h2 class="xt-animation jello">jello拉伸</h2>
+    <h2 class="xt-animation rotate">rotate旋转</h2>
+    <h2 class="xt-animation lightenOut">lightenOut中间</h2>
+    <h2 class="xt-animation lightenOutLeft">lightenOut左</h2>
+    <h2 class="xt-animation lightenOutRight">lightenOut右</h2>
+    <h2 class="xt-animation inauguration">inauguration开幕式</h2>
+    <h2 class="xt-animation inaugurationTop">inauguration开幕式</h2>
+    <h2 class="xt-animation inaugurationBottom">inauguration开幕式</h2>
+    <h2 class="xt-animation heartBeat fast">heartBeat心跳</h2>
+    <h2 class="xt-animation bounceLeft">bounceLeft左边出来</h2>
+    <h2 class="xt-animation bounceRight">bounceRight右边出来</h2>
+    <h2 class="xt-animation bounceTop">bounceTop上面出来</h2>
+    <h2 class="xt-animation bounceBottom">bounceBottom下面出来</h2>
+    <h2 class="xt-animation bounceIn">bounceIn里面出来</h2>
+    <h2 class="xt-animation fadeIn">fadeIn渐显</h2>
+    <h2 class="xt-animation fadeInDown">fadeInDown从上渐显</h2>
+    <h2 class="xt-animation fadeInDownBig">fadeInDownBig从上渐显</h2>
+    <h2 class="xt-animation fadeInLeft">fadeInLeft从左渐显</h2>
+    <h2 class="xt-animation fadeInLeftBig">fadeInLeftBig从左渐显</h2>
+    <h2 class="xt-animation fadeInRight">fadeInRight从右渐显</h2>
+    <h2 class="xt-animation fadeInRightBig">fadeInRight从右渐显</h2>
+    <h2 class="xt-animation fadeInUp">fadeInUp从下渐显</h2>
+    <h2 class="xt-animation fadeInUpBig">fadeInUp从下渐显</h2>
+    <h2 class="xt-animation bounceOut">bounceOut外部弹出</h2>
+    <h2 class="xt-animation bounceOutDown">bounceOutDown下弹出</h2>
+    <h2 class="xt-animation bounceOutUp">bounceOutUp上弹出</h2>
+    <h2 class="xt-animation bounceOutLeft">bounceOutLeft左弹出</h2>
+    <h2 class="xt-animation bounceOutRight">bounceOutRight右弹出</h2>
+    <h2 class="xt-animation fadeOut">fadeOut渐隐</h2>
+    <h2 class="xt-animation fadeOutDown">fadeOutDown下渐隐</h2>
+    <h2 class="xt-animation fadeOutDownBig fast">fadeOutDownBig下渐隐</h2>
+    <h2 class="xt-animation fadeOutLeft">fadeOutLeft左渐隐</h2>
+    <h2 class="xt-animation fadeOutLeftBig fast">fadeOutLeftBig左渐隐</h2>
+    <h2 class="xt-animation fadeOutRight">fadeOutRight右渐隐</h2>
+    <h2 class="xt-animation fadeOutRightBig">fadeOutRightBig右渐隐</h2>
+    <h2 class="xt-animation fadeOutUp">fadeOutUp上渐隐</h2>
+    <h2 class="xt-animation fadeOutUpBig fast">fadeOutUpBig上渐隐</h2>
+    <h2 class="xt-animation flip">flip旋转变大</h2>
+    <h2 class="xt-animation flipX">flipX轴旋转</h2>
+    <h2 class="xt-animation flipOutX">flipOutX翻转</h2>
+    <h2 class="xt-animation flipInY">flipInY轴翻转</h2>
+    <h2 class="xt-animation flipOutY">flipOutY翻转</h2>
+</body>
+
+</html>
